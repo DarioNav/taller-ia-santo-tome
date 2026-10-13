@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Taller IA generativa en la abogacía · Inscripción</title>
+<title>Inscripción · Taller práctico de inteligencia artificial generativa en la abogacía</title>
 <meta name="description" content="Taller práctico de inteligencia artificial generativa en la abogacía. 3 clases por Zoom en vivo con Darío Saúl Navarro. Organiza el Colegio de Abogados de la 5ta Circunscripción, Santo Tomé.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,11 +36,13 @@
 --shadow-2:0 6px 18px -6px rgba(18,20,23,.14),0 2px 4px rgba(18,20,23,.05);
 --shadow-offset:4px 4px 0 var(--ink-900);
 --ease-out:cubic-bezier(.2,.7,.2,1);--dur-fast:120ms;--dur-base:200ms;
+--hdr-h:72px;
 --texture-grid:radial-gradient(circle,rgba(18,20,23,.12) 1px,transparent 1.2px) 0 0/20px 20px;
 }
 *,*::before,*::after{box-sizing:border-box}
+@media(min-width:640px){:root{--hdr-h:92px}}
 html{scroll-behavior:smooth}
-section[id]{scroll-margin-top:65px}
+section[id]{scroll-margin-top:var(--hdr-h)}
 body{margin:0;background:var(--surface-page);color:var(--text-body);font-family:var(--font-sans);font-size:var(--fs-body);line-height:var(--lh-body);-webkit-font-smoothing:antialiased}
 a{color:var(--text-link);text-underline-offset:3px;text-decoration-thickness:1px}
 a:hover{color:var(--text-link-hover)}
@@ -62,19 +64,24 @@ h1 em,h2 em{color:var(--accent);font-style:italic}
 .hl{background:linear-gradient(transparent 62%,var(--highlight) 62%,var(--highlight) 92%,transparent 92%)}
 .lead{font-size:var(--fs-body-l);color:var(--text-body);max-width:560px;margin:var(--space-5) 0 0}
 
-/* ===== Header ===== */
-.top{position:sticky;top:0;z-index:20;background:rgba(246,243,236,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--border-default)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);min-height:64px}
-.brand{display:flex;align-items:center;gap:var(--space-3);min-width:0}
-.brand img{width:40px;height:40px;flex:none}
-.brand .nm{font-family:var(--font-display);font-weight:600;font-size:18px;color:var(--text-strong);line-height:1.1}
-.brand .nm small{display:block;font-family:var(--font-mono);font-weight:400;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
-.sep{width:1px;align-self:stretch;margin:14px 0;background:var(--border-default)}
-.colegio{display:none;align-items:center;gap:var(--space-3);margin-left:auto}
-.colegio img{width:40px;height:40px;border-radius:50%;flex:none}
-.colegio span{font-size:12px;line-height:1.25;color:var(--text-body);font-weight:500}
-.colegio span small{display:block;color:var(--text-muted);font-weight:400}
-@media(min-width:640px){.colegio{display:flex}.top .btn{display:none}}
+/* ===== Header (negro, referencia institucional del Colegio) ===== */
+.top{position:sticky;top:0;z-index:20;background:var(--ink-950);color:var(--paper-50);border-bottom:1px solid var(--ink-800)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);min-height:var(--hdr-h)}
+.colegio{display:flex;align-items:center;gap:var(--space-3);min-width:0}
+.colegio img{width:44px;height:44px;border-radius:50%;flex:none}
+.colegio>span{font-family:var(--font-display);font-size:17px;line-height:1.1;color:var(--paper-50);font-weight:500;white-space:nowrap}
+.colegio .largo{display:none}
+.colegio>span small{display:block;margin-top:4px;font-family:var(--font-mono);font-weight:400;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-300);line-height:1.35}
+.hdr-der{display:flex;align-items:center;gap:var(--space-5);flex:none}
+.brand{display:none;align-items:center;gap:var(--space-2)}
+.brand img{width:32px;height:32px;flex:none}
+.brand .nm{font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--paper-50);line-height:1.1}
+.brand .nm small{display:block;font-family:var(--font-mono);font-weight:400;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-300)}
+.top .btn.sm{padding:0 var(--space-3);font-size:13px}
+.top .btn{border-color:var(--paper-50);box-shadow:2px 2px 0 var(--paper-50)}
+.top .btn:hover{box-shadow:3px 3px 0 var(--paper-50)}
+@media(min-width:640px){.colegio img{width:64px;height:64px}.colegio span{font-size:26px}.colegio>span small{font-size:11px}}
+@media(min-width:900px){.brand{display:flex}}
 
 /* ===== Botones ===== */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);height:var(--space-12);padding:0 var(--space-6);font:600 var(--fs-body)/1 var(--font-sans);border:1.5px solid var(--ink-900);border-radius:var(--radius-s);background:var(--accent);color:var(--accent-ink);cursor:pointer;text-decoration:none;box-shadow:var(--shadow-offset);transition:transform var(--dur-fast) var(--ease-out),box-shadow var(--dur-fast) var(--ease-out),background var(--dur-fast)}
@@ -87,18 +94,20 @@ h1 em,h2 em{color:var(--accent);font-style:italic}
 .btn.block{width:100%}
 
 /* ===== Hero ===== */
-.hero{background:var(--surface-page);background-image:var(--texture-grid);padding:var(--space-12) 0 var(--space-10)}
+.hero{background:var(--surface-page);background-image:var(--texture-grid);padding:var(--space-10) 0 var(--space-12)}
 .tags{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-6)}
 .tag{font-family:var(--font-mono);font-size:var(--fs-overline);letter-spacing:var(--ls-overline);text-transform:uppercase;font-weight:500;padding:6px 12px;border-radius:var(--radius-pill);border:1.5px solid var(--ink-900);background:var(--white);color:var(--ink-900)}
 .tag.acc{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .hero-grid{display:grid;gap:var(--space-8)}
-.docente{display:flex;align-items:center;gap:var(--space-4)}
-.docente img{width:96px;height:112px;object-fit:cover;object-position:center top;border:1.5px solid var(--ink-900);border-radius:var(--radius-m);box-shadow:var(--shadow-offset);filter:saturate(.9)}
+.hero h1{font-size:clamp(34px,8vw,58px);line-height:1.05}
+.docente{display:flex;align-items:center;gap:var(--space-5);order:-1}
+.docente img{width:128px;height:156px;object-fit:cover;object-position:center top;border:1.5px solid var(--ink-900);border-radius:var(--radius-m);box-shadow:var(--shadow-offset);filter:saturate(.9)}
 .docente p{margin:0;font-size:var(--fs-body-s);color:var(--text-muted)}
-.docente strong{display:block;font-size:var(--fs-body);color:var(--text-strong);font-weight:600}
+.docente .rol{font-family:var(--font-mono);font-size:var(--fs-overline);letter-spacing:var(--ls-overline);text-transform:uppercase;color:var(--text-accent);font-weight:500}
+.docente strong{display:block;font-family:var(--font-display);font-size:24px;line-height:1.15;color:var(--text-strong);font-weight:500;margin:4px 0 2px}
 .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4) var(--space-6);margin-top:var(--space-8)}
 .cta-row .nota{font-size:var(--fs-body-s);color:var(--text-muted)}
-@media(min-width:820px){.hero-grid{grid-template-columns:1fr auto;align-items:end;gap:var(--space-12)}.docente{flex-direction:column;align-items:flex-start}.docente img{width:200px;height:240px}}
+@media(min-width:820px){.hero{padding:var(--space-16) 0}.hero-grid{grid-template-columns:1fr auto;align-items:center;gap:var(--space-12)}.docente{order:0;flex-direction:column;align-items:flex-start}.docente img{width:280px;height:340px}}
 
 /* ===== Clases ===== */
 .clases{border-top:1.5px solid var(--ink-900);margin-top:var(--space-8)}
@@ -198,16 +207,17 @@ footer small{display:block;color:var(--ink-400);font-size:12px}
 
 <header class="top">
   <div class="wrap">
-    <div class="brand">
-      <img data-asset="LOGO_VINO" alt="[dn_ia]" width="40" height="40">
-      <div class="nm">Clases IA<small>Darío Saúl Navarro</small></div>
+    <div class="colegio">
+      <img data-asset="SELLO" alt="Sello del Colegio de Abogados" width="64" height="64">
+      <span>Colegio de Abogados<small><span class="largo">5ta Circunscripción Judicial · Santo Tomé, Corrientes</span><span class="corto">5ta Circ. · Santo Tomé</span></small></span>
     </div>
-    <div class="colegio" id="hdrColegio">
-      <div class="sep"></div>
-      <img data-asset="SELLO" alt="Sello del Colegio de Abogados" width="40" height="40">
-      <span>Colegio de Abogados<small>5ta Circunscripción · Santo Tomé</small></span>
+    <div class="hdr-der">
+      <div class="brand">
+        <img data-asset="LOGO_VINO" alt="[dn_ia]" width="32" height="32">
+        <div class="nm">Clases IA<small>Darío Saúl Navarro</small></div>
+      </div>
+      <a class="btn sm" href="#pago">Inscribirme</a>
     </div>
-    <a class="btn sm" href="#pago">Inscribirme</a>
   </div>
 </header>
 
@@ -217,8 +227,7 @@ footer small{display:block;color:var(--ink-400);font-size:12px}
   <div class="wrap hero-grid">
     <div>
       <div class="tags"><span class="tag acc">Zoom en vivo</span><span class="tag">3 clases</span><span class="tag">Cupos limitados</span></div>
-      <p class="overline">Taller práctico</p>
-      <h1>Inteligencia artificial <em>generativa</em> en la abogacía</h1>
+      <h1>Taller práctico de inteligencia artificial <em>generativa</em> en la abogacía</h1>
       <p class="lead">Para abogados en ejercicio que quieren integrar la IA a su práctica, <span class="hl">con criterio y casos reales</span>. Con demostraciones paso a paso.</p>
       <div class="cta-row">
         <a class="btn" href="#pago" id="ctaHero">Inscribirme</a>
@@ -226,8 +235,8 @@ footer small{display:block;color:var(--ink-400);font-size:12px}
       </div>
     </div>
     <div class="docente">
-      <img data-asset="DARIO" alt="Darío Saúl Navarro" width="200" height="240">
-      <p>Director y docente<strong>Darío Saúl Navarro</strong>@darionavarro.ia</p>
+      <img data-asset="DARIO" alt="Darío Saúl Navarro" width="280" height="340">
+      <p><span class="rol">Director y docente</span><strong>Darío Saúl Navarro</strong>@darionavarro.ia</p>
     </div>
   </div>
 </section>
