@@ -255,7 +255,7 @@ footer small{display:block;color:var(--ink-400);font-size:12px}
 <section style="padding-top:var(--space-12)">
   <div class="wrap">
     <p class="overline">Programa</p>
-    <h2>Tres viernes, <em>tres clases</em></h2>
+    <h2>Tres sábados, <em>tres clases</em></h2>
     <div class="clases" id="listaClases"></div>
     <div class="info" id="infoCurso"></div>
     <p class="incluye"><b>Incluye:</b> materiales de clase, guías de uso y acceso a herramientas desarrolladas por el docente. <b>Evaluación:</b> cuestionario de seguimiento (multiple choice) sobre los contenidos de las clases.</p>
@@ -414,14 +414,14 @@ const CONFIG = {
   ],
 
   CLASES: [
-    { n: "01", dia: "Vie", fecha: "30 oct", titulo: "Introducción a la IA generativa",
+    { n: "01", dia: "Sáb", fecha: "31 oct", titulo: "Introducción a la IA generativa",
       temas: ["Definición de inteligencia artificial. Tipos de IA.", "ABC de la IA generativa. Fluidez con la IA y marco teórico para su uso.",
               "Modelos más populares: ChatGPT, Claude, Gemini.", "Ingreso, interfaz y configuración inicial de ChatGPT y Gemini.", "Privacidad de datos. Anonimización."],
       casos: ["Búsqueda de jurisprudencia con IA.", "Redacción y control de documentos."] },
-    { n: "02", dia: "Vie", fecha: "6 nov", titulo: "Aplicación práctica de IA generativa",
+    { n: "02", dia: "Sáb", fecha: "7 nov", titulo: "Aplicación práctica de IA generativa",
       temas: ["Alucinaciones y técnicas para evitarlas.", "Sesgos y riesgos asociados.", "Gemini Notebook (ex NotebookLM) para el análisis masivo de documentos.", "Aplicaciones específicas para la práctica jurídica."],
       casos: ["Análisis de resoluciones judiciales para elaborar recursos.", "Preparación de testimoniales con simulación de preguntas."] },
-    { n: "03", dia: "Vie", fecha: "13 nov", titulo: "Ingeniería de prompts y automatización de escritos",
+    { n: "03", dia: "Sáb", fecha: "14 nov", titulo: "Ingeniería de prompts y automatización de escritos",
       temas: ["Ingeniería de prompts: estrategias y tácticas de prompting.", "Generación de imágenes para marketing profesional."],
       casos: ["Elaboración de skills para estandarizar tareas.", "Diseño de estrategia procesal y replicación de documentos repetitivos."] }
   ],
@@ -452,7 +452,7 @@ const ASSETS={"SELLO": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAACICA
     var d = document.createElement("div");
     d.className = "clase";
     d.innerHTML = '<div class="f"><small></small><span></span></div><div><div class="n"></div><h3></h3></div>';
-    d.querySelector("small").textContent = c.dia === "Vie" ? "Viernes" : c.dia;
+    d.querySelector("small").textContent = c.dia === "Sáb" ? "Sábado" : c.dia;
     d.querySelector(".f span").textContent = c.fecha;
     d.querySelector(".n").textContent = "Clase " + c.n;
     d.querySelector("h3").textContent = c.titulo;
